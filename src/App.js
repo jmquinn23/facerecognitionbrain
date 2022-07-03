@@ -175,6 +175,7 @@ onButtonSubmit = () => {
           })
             .then(response => response.json())
             .then(count => {
+              //update only the entires of the user, do reset the entire object state
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
 
